@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Consent</title>
-    </head>
+    <title>User List</title>
+</head>
 <body>
+    <h1>Users who visited Spawnify Games</h1>
+    <ul id="userList"></ul>
 
-<div id="cookie-banner">
-    This website uses cookies to enhance the user experience. 
-    <button onclick="acceptCookies()">Accept Cookies</button>
-</div>
+    <script>
+        const users = []; // This array should be populated with user data
 
+        // Function to display users
+        function displayUsers() {
+            const userList = document.getElementById('userList');
+            users.forEach(user => {
+                const listItem = document.createElement('li');
+                listItem.textContent = user;
+                userList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display users
+        displayUsers();
+    </script>
 </body>
 </html>
